@@ -2,7 +2,7 @@
 
 <p align="center">
   Java backend engineer · Open-source contributor<br/>
-  Zalando · Adyen · Picnic · OpenRewrite
+  Merged work at Zalando, Adyen and Picnic · Contributing to OpenRewrite
 </p>
 
 <p align="center">
@@ -21,11 +21,14 @@
 
 ## About
 
-I'm a backend engineer at Wipro in Pune, building REST APIs with Java 17 and Spring Boot 3 for an enterprise telecom order management system. Outside work I contribute to open-source Java projects, mostly libraries I use or admire.
+I'm a backend engineer at Wipro in Pune, building production REST APIs with Java 17 and Spring Boot 3 for VodafoneIdea's telecom order management system, as part of a 7-member team. I cut average response time by about 30% through MySQL index tuning and query restructuring, and traced a recurring order-dispatch timeout to an unindexed foreign key lookup.
+
+Outside work I contribute to open-source Java projects, mostly libraries I use or admire. I start by reproducing the problem, check it isn't already reported or fixed, and then send a small, well-tested change.
 
 - 6 merged pull requests across Zalando, Adyen and Picnic
 - Member of the NVIDIA AI Aerial / 6G Developer Program, through my work on Sionna
-- AWS Certified Cloud Practitioner
+- AWS Certified Cloud Practitioner · NVIDIA Generative AI · Spring Boot (Scaler Academy)
+- B.E. Computer Engineering, Savitribai Phule Pune University (CGPA 8.56, 2nd rank in batch)
 - Learning German toward a Goethe-Institut certificate
 
 ## Open source
@@ -41,6 +44,13 @@ I'm a backend engineer at Wipro in Pune, building REST APIs with Java 17 and Spr
 | Adyen | [adyen-java-api-library #1952](https://github.com/Adyen/adyen-java-api-library/pull/1952) | Fixes unescaped regex dots in `Service.createBaseURL` (shipped in v42.0.0) |
 | Picnic | [error-prone-support #2275](https://github.com/PicnicSupermarket/error-prone-support/pull/2275) | Refaster rule: `Optional.of(x).orElse(y)` → `requireNonNull(x)` |
 
+### Bugs found and reproduced
+
+| Project | Issue | What I found |
+|---|---|---|
+| Picnic error-prone-support | [#2336](https://github.com/PicnicSupermarket/error-prone-support/issues/2336) | `FormatStringConcatenation` copies literal `%` and `{}` fragments unescaped into rewritten format strings, causing a runtime `IllegalFormatConversionException` for AssertJ targets. Reproduced with a compiled-checker test and direct JVM execution, and confirmed not a duplicate |
+| NVIDIA Sionna | [#1108](https://github.com/NVlabs/sionna/issues/1108), [#1111](https://github.com/NVlabs/sionna/issues/1111) | TR 38.901 compliance issues |
+
 ### In progress
 
 | Org | Pull request | Status |
@@ -50,14 +60,6 @@ I'm a backend engineer at Wipro in Pune, building REST APIs with Java 17 and Spr
 | OpenRewrite | [rewrite-testing-frameworks #1183](https://github.com/openrewrite/rewrite-testing-frameworks/pull/1183) | `AddMissingTestAnnotation` recipe for [#772](https://github.com/openrewrite/rewrite-testing-frameworks/issues/772). Awaiting review |
 | Kestra | [kestra #19219](https://github.com/kestra-io/kestra/pull/19219) | Keeps title and description on the retry `type` field. Awaiting review |
 | Kestra | [kestra #19081](https://github.com/kestra-io/kestra/pull/19081) | Fixes UID collisions in `IdUtils.fromParts`. On hold pending a maintainer decision |
-
-<details>
-<summary>Other contributions</summary>
-
-- Submitted fixes for TR 38.901 compliance issues in NVIDIA Sionna ([#1108](https://github.com/NVlabs/sionna/issues/1108), [#1111](https://github.com/NVlabs/sionna/issues/1111))
-- Reported a `FormatStringConcatenation` bug in Picnic's error-prone-support ([#2336](https://github.com/PicnicSupermarket/error-prone-support/issues/2336))
-
-</details>
 
 ## Projects
 
