@@ -1,21 +1,13 @@
-<h1 align="center">Vinayak Gote</h1>
+# Vinayak Gote
 
-<p align="center">
-  Java backend engineer · Open-source contributor<br/>
-  Merged work at Zalando, Adyen and Picnic · Contributing to OpenRewrite
-</p>
+**Java backend engineer · Open-source contributor**
 
-<p align="center">
-  <a href="https://linkedin.com/in/vinayakgote">LinkedIn</a> ·
-  <a href="https://vinayak6g.hashnode.dev">Blog</a> ·
-  <a href="https://dev.to/vinayakgote">Dev.to</a> ·
-  <a href="https://portfolio-gules-ten-40.vercel.app">Portfolio</a> ·
-  <a href="mailto:vinayakgote44@gmail.com">Email</a>
-</p>
+Merged work at Zalando, Adyen and Picnic · Contributing to OpenRewrite and LINE Armeria
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi,angular,postgres,mysql,aws,docker,git,maven,idea" alt="Java, Spring, Python, FastAPI, Angular, PostgreSQL, MySQL, AWS, Docker, Git, Maven, IntelliJ IDEA" />
-</p>
+[LinkedIn](https://www.linkedin.com/in/vinayakgote) · [Dev.to](https://dev.to/vinu2730) · [Portfolio](https://portfolio-gules-ten-40.vercel.app/
+) · [Email](mailto:vinayakgote44@gmail.com)
+
+Java, Spring, Python, FastAPI, Angular, PostgreSQL, MySQL, AWS, Docker, Git, Maven, IntelliJ IDEA
 
 ---
 
@@ -31,6 +23,8 @@ Outside work I contribute to open-source Java projects, mostly libraries I use o
 - B.E. Computer Engineering, Savitribai Phule Pune University (CGPA 8.56, 2nd rank in batch)
 - Learning German toward a Goethe-Institut certificate
 
+---
+
 ## Open source
 
 ### Merged (6)
@@ -44,6 +38,17 @@ Outside work I contribute to open-source Java projects, mostly libraries I use o
 | Adyen | [adyen-java-api-library #1952](https://github.com/Adyen/adyen-java-api-library/pull/1952) | Fixes unescaped regex dots in `Service.createBaseURL` (shipped in v42.0.0) |
 | Picnic | [error-prone-support #2275](https://github.com/PicnicSupermarket/error-prone-support/pull/2275) | Refaster rule: `Optional.of(x).orElse(y)` → `requireNonNull(x)` |
 
+### In progress
+
+| Org | Pull request | Status |
+|---|---|---|
+| LINE | [armeria #7120](https://github.com/line/armeria/pull/7120) | Takes TLS 1.3 into account when validating HTTP/2 cipher suites (fixes #7112). Under review |
+| LINE | [armeria #7126](https://github.com/line/armeria/pull/7126) | Fixes the HTTP/2 stream reset when a service in a `serviceWorkerGroup` throws (fixes #7061). Open |
+| Picnic | [error-prone-support #2291](https://github.com/PicnicSupermarket/error-prone-support/pull/2291) | `CollectorMutability` suggests JDK-native unmodifiable collectors. Under review |
+| Zalando | [logbook #2386](https://github.com/zalando/logbook/pull/2386) | `logbook-jdkhttpclient` module for `java.net.http.HttpClient`. Sync `send()` done, `sendAsync()` planned |
+| OpenRewrite | [rewrite-testing-frameworks #1183](https://github.com/openrewrite/rewrite-testing-frameworks/pull/1183) | `AddMissingTestAnnotation` recipe for #772. Awaiting review |
+| Kestra | [kestra #19219](https://github.com/kestra-io/kestra/pull/19219) | Keeps title and description on the retry type field. Awaiting review |
+
 ### Bugs found and reproduced
 
 | Project | Issue | What I found |
@@ -51,26 +56,18 @@ Outside work I contribute to open-source Java projects, mostly libraries I use o
 | Picnic error-prone-support | [#2336](https://github.com/PicnicSupermarket/error-prone-support/issues/2336) | `FormatStringConcatenation` copies literal `%` and `{}` fragments unescaped into rewritten format strings, causing a runtime `IllegalFormatConversionException` for AssertJ targets. Reproduced with a compiled-checker test and direct JVM execution, and confirmed not a duplicate |
 | NVIDIA Sionna | [#1108](https://github.com/NVlabs/sionna/issues/1108), [#1111](https://github.com/NVlabs/sionna/issues/1111) | TR 38.901 compliance issues |
 
-### In progress
-
-| Org | Pull request | Status |
-|---|---|---|
-| Picnic | [error-prone-support #2291](https://github.com/PicnicSupermarket/error-prone-support/pull/2291) | `CollectorMutability` suggests JDK-native unmodifiable collectors. Approved, waiting on a second review |
-| Zalando | [logbook #2386](https://github.com/zalando/logbook/pull/2386) | `logbook-jdkhttpclient` module for `java.net.http.HttpClient`. Sync `send()` done, `sendAsync()` planned |
-| OpenRewrite | [rewrite-testing-frameworks #1183](https://github.com/openrewrite/rewrite-testing-frameworks/pull/1183) | `AddMissingTestAnnotation` recipe for [#772](https://github.com/openrewrite/rewrite-testing-frameworks/issues/772). Awaiting review |
-| Kestra | [kestra #19219](https://github.com/kestra-io/kestra/pull/19219) | Keeps title and description on the retry `type` field. Awaiting review |
-| Kestra | [kestra #19081](https://github.com/kestra-io/kestra/pull/19081) | Fixes UID collisions in `IdUtils.fromParts`. On hold pending a maintainer decision |
+---
 
 ## Projects
 
-**[Sionna Visualizer](https://github.com/Vinu2111/sionna-visualizer)** · [Live](https://sionna-visualizer.vercel.app)
-Angular 17, Spring Boot 3, FastAPI, PostgreSQL, JWT.
-A dashboard that makes NVIDIA Sionna 6G simulation results visual, comparable and shareable, with a publication pipeline, multi-simulator comparison and a Claude API integration for natural-language simulation.
+**[Sionna Visualizer](https://github.com/Vinu2111/sionna-visualizer)** · Live
+Angular 17, Spring Boot 3, FastAPI, PostgreSQL, JWT. A dashboard that makes NVIDIA Sionna 6G simulation results visual, comparable and shareable, with a publication pipeline, multi-simulator comparison and a Claude API integration for natural-language simulation.
 
-**[Picnic Store Intelligence](https://github.com/Vinu2111/picnic-store-intelligence)** · [Live](https://picnic-store-intelligence.vercel.app) · [API docs](https://picnic-store-intelligence-production.up.railway.app/swagger-ui.html)
-Java 21, Spring Boot 3.2, PostgreSQL, Vanilla JS.
-A prototype of two ideas from Picnic's Page Platform engineering blog series: server-driven page layouts and per-customer section ranking.
+**[Picnic Store Intelligence](https://github.com/Vinu2111/picnic-store-intelligence)** · Live · API docs
+Java 21, Spring Boot 3.2, PostgreSQL, Vanilla JS. A prototype of two ideas from Picnic's Page Platform engineering blog series: server-driven page layouts and per-customer section ranking.
+
+---
 
 ## Writing
 
-I write about backend engineering, open-source contributions and Java on [Hashnode](https://vinayak6g.hashnode.dev) and [Dev.to](https://dev.to/vinayakgote).
+I write about backend engineering, open-source contributions and Java on [Hashnode](https://hashnode.com/@vinayakgote2730) and [Dev.to](YOUR_DEVTO_URL).
